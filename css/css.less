@@ -1,0 +1,165 @@
+@font-family: 'Poppins', sans-serif;
+@title-font: 'Chaotic Connection', sans-serif;
+@primary-color: #8732a8;
+@secondary-color: #ffea00;
+@gradient-start: #232e20;
+@gradient-end: #359974;
+@background-color: linear-gradient(135deg, @gradient-start, @gradient-end);
+@header-color: rgba(54, 28, 87, 0.49);
+@text-color: #341042;
+@text-secondary: rgba(50, 23, 84, 0.973);
+
+body {
+  font-family: @font-family;
+  margin: 0;
+  padding: 0;
+  background: @background-color;
+}
+
+header {
+  padding: 20px 0;
+  background-color: @header-color;
+  border-bottom: 1px solid @primary-color;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.social-icons {
+  a {
+    font-size: 24px;
+    color: @secondary-color;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 10%;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+
+  .hero-content {
+    max-width: 600px;
+    flex: 1;
+    order: 2;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: @text-color;
+      margin-bottom: 20px;
+      font-family: @title-font;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: @text-secondary;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, darken(@primary-color, 10%), @primary-color);
+      color: @secondary-color;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px fade(@primary-color, 40%);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: linear-gradient(135deg, @primary-color, lighten(@primary-color, 10%));
+        box-shadow: 0 6px 15px fade(@primary-color, 60%);
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .hero-image {
+    flex: 1;
+    text-align: center;
+    order: 1;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      animation: fadeIn 2s ease-in-out;
+    }
+  }
+}
+
+.mascot {
+  font-size: 2rem;
+  font-weight: 600;
+  color: fade(@secondary-color, 70%);
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+
+  a {
+    font-weight: 600;
+    color: @text-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: @title-font;
+
+    &:hover {
+      color: darken(@primary-color, 10%);
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 10%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
