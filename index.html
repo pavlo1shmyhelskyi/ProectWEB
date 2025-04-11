@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн магазину кімнатних рослин</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Playfair+Display:wght@700&family=Crimson+Text:wght@400&display=swap">
+  <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+
+  <header class="p-3 border-bottom">
+    <div class="container d-flex justify-content-start align-items-center">
+      <div class="d-flex align-items-center">
+        <img src="img/Logo.png" alt="Logo" class="img-fluid" style="max-width: 108px;">
+      </div>
+      <nav class="ms-3">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="#">Кімнатні рослини</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Каталог товарів</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Новини</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Кошик</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-image">
+      <img src="img/Cactus.png" alt="Art Gallery Image" class="img-fluid">
+    </div>
+    <div class="hero-content">
+      <h1>Онлайн-магазин</h1> 
+      <h1>кімнатних рослин</h1>
+      <p>Це сайт, де ви можете знайти найкращі кімнатні рослини для вашого дому чи офісу і створити атмосферу комфорту та зеленої краси. Переглядайте наш асортимент, обирайте рослини, що підходять саме вам, і зробіть свій простір живим і затишним. Приєднуйтесь до нас і наповніть свій дім природною красою!ї</p>
+      <a href="#" class="btn">Переглянути</a>
+    </div>
+  </section>
+
+   <!-- Галерея -->
+   <section class="gallery-section">
+    <h2>Галерея</h2>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="img/Plant1.jpg" alt="Plant 1">
+        <div class="plant-name">Назва Рослини 1</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/Plant2.jpg" alt="Plant 2">
+        <div class="plant-name">Назва Рослини 2</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/Plant3.jpg" alt="Plant 3">
+        <div class="plant-name">Назва Рослини 3</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/Plant4.jpg" alt="Plant 4">
+        <div class="plant-name">Назва Рослини 4</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/Plant5.jpg" alt="Plant 5">
+        <div class="plant-name">Назва Рослини 5</div>
+      </div>
+      <div class="gallery-item">
+        <img src="img/Plant6.jpg" alt="Plant 6">
+        <div class="plant-name">Назва Рослини 6</div>
+      </div>
+    </div>
+    <a href="#" class="btn">Дізнатися більше</a>
+    </div>
+  </section>
+<section class="starry-night-section">
+  <div class="starry-night-image">
+    <img src="img/Ned.png" alt="Starry Night">
+    <p class="artist-signature">Найкращий покупець магазину</p>
+  </div>
+  <div class="starry-night-text">
+    <h2>Переваги магазину</h2>
+    <p>
+      У нашому магазині ви отримуєте кращу якість імпортних рослин за доступними цінами. Всі рослини ретельно відбираються, щоб забезпечити вам тільки здорові та красиві варіанти. Ми пропонуємо швидку доставку, що дозволяє отримати ваші покупки в найкоротші терміни. Крім того, наші фахівці завжди готові надати корисні поради щодо догляду. У нас ви знайдете великий асортимент рослин, що підходять для будь-якого інтер'єру, а також вигідні умови для постійних покупців.
+    </p>
+  </div>
+</section>
+<section class="krik-section">
+  <div class="krik-image">
+    <img src="img/Plant4.jpg" alt="Plant" class="krik-img" />
+  </div>
+  <div class="krik-text">
+    <div class="krik-title-price">
+      <div class="krik-title">
+        <h1>Назва кольору</h1>
+      </div>
+      <div class="krik-price">
+        <h2>Ціна</h2>
+      </div>
+    </div>
+    <div class="krik-details">
+      <div class="block left">
+        <h3>Опис</h3>
+        <p>Тут буде опис продукту або послуги, що підходить під ваші вимоги. Опис може бути довшим або коротшим, залежно від контексту.</p>
+      </div>
+      <div class="block right">
+        <h3>Деталі</h3>
+        <p>Тут буде більше деталей, які можуть бути корисними для користувача, наприклад, технічні характеристики або інформація про доставку.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Модальне вікно для перегляду фото -->
+<div class="modal" id="modal">
+  <span class="modal-close" onclick="closeModal()">&times;</span>
+  <img id="modal-img" src="" alt="Full-screen image">
+</div>
+
+<!-- Скрипт для відкриття і закриття модального вікна -->
+<script>
+  function openModal(imgElement) {
+    var modal = document.getElementById('modal');
+    var modalImg = document.getElementById('modal-img');
+    modal.style.display = 'flex'; /* Показуємо модальне вікно */
+    modalImg.src = imgElement.src; /* Призначаємо зображення для модального вікна */
+  }
+
+  function closeModal() {
+    var modal = document.getElementById('modal');
+    modal.style.display = 'none'; /* Закриваємо модальне вікно */
+  }
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
